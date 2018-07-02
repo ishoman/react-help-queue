@@ -21,6 +21,21 @@ class App extends React.Component {
     this.setState({masterTicketList: newMasterTicketList});
   }
 
+  componentDidMount() {
+    this.waitTimeUpdateTimer = setInterval(() =>
+      this.updateTicketElapsedWaitTime(),
+      5000
+    );
+  }
+
+  updateTicketElapsedWaitTime() {
+    console.log("check");
+    let newMasterTicketList = this.state.masterTicketList.slice();
+    newMasterTicketList.forEach((ticket) =>
+      
+    );
+  }
+
   render(){
     return (
       <div>
